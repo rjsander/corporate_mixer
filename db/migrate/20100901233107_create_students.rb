@@ -7,11 +7,12 @@ class CreateStudents < ActiveRecord::Migration
       t.string :major
       t.integer :grad_year
       t.string :affiliation
-      t.string :choice1
-      t.string :choice2
-      t.string :choice3
-      t.string :choice4
-      t.string :choice5
+      t.boolean :active
+      t.string :choice_one
+      t.string :choice_two
+      t.string :choice_three
+      t.string :choice_four
+      t.string :choice_five
       t.timestamps
     end
   end

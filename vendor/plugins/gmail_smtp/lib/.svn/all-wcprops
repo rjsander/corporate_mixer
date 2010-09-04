@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/cminsider/!svn/ver/97/cminsider/vendor/plugins/gmail_smtp/lib
+END
+actionmailer_gmail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/cminsider/!svn/ver/97/cminsider/vendor/plugins/gmail_smtp/lib/actionmailer_gmail.rb
+END
+smtp_tls.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/cminsider/!svn/ver/92/cminsider/vendor/plugins/gmail_smtp/lib/smtp_tls.rb
+END

@@ -25,24 +25,24 @@
     <%= f.select :affiliation, Student::SESSION_LIST, :prompt => "Select an organization" %>
   </p>
   <p>
-    <%= f.label :choice1 %><br />
-    <%= f.select :choice1, Student::CHOICE1_LIST, :prompt => "1st choice company" %>
+    <%= f.label :choice_one %><br />
+    <%= f.select :choice_one, Student::CHOICES, :prompt => "1st choice company" %>
   </p>
   <p>
-    <%= f.label :choice2 %><br />
-    <%= f.select :choice2, Student::CHOICE2_LIST, :prompt => "2nd choice company" %>
+    <%= f.label :choice_two %><br />
+    <%= f.select :choice_two, Student::CHOICES, :prompt => "2nd choice company" %>
   </p>
   <p>
-    <%= f.label :choice3 %><br />
-    <%= f.select :choice3, Student::CHOICE3_LIST, :prompt => "3rd choice company" %>
+    <%= f.label :choice_three %><br />
+    <%= f.select :choice_three, Student::CHOICES, :prompt => "3rd choice company" %>
   </p>
   <p>
-    <%= f.label :choice4 %><br />
-    <%= f.select :choice4, Student::CHOICE4_LIST, :prompt => "4th choice company" %>
+    <%= f.label :choice_four %><br />
+    <%= f.select :choice_four, Student::CHOICES, :prompt => "4th choice company" %>
   </p>
   <p>
-    <%= f.label :choice5 %><br />
-    <%= f.select :choice5, Student::CHOICE5_LIST, :prompt => "5th choice company" %>
+    <%= f.label :choice_five %><br />
+    <%= f.select :choice_five, Student::CHOICES, :prompt => "5th choice company" %>
   </p>
   <p><%= f.submit %></p>
 <% end %>

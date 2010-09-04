@@ -12,7 +12,18 @@ class StudentsController < ApplicationController
   end
   
   def create
+    
     @student = Student.new(params[:student])
+    
+    if (Student.get_affiliation(@student.affiliation).size >= 20)
+      @student.active = false
+      PostOffice.deliver_waitlist_msg(@student) 
+      
+    else
+      @student.active = true
+      PostOffice.deliver_registration_msg(@student) 
+    end
+    
     if @student.save
       flash[:notice] = "Successfully created student."
       redirect_to @student
