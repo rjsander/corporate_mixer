@@ -1,0 +1,25 @@
+<% title "Mixers" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Location</th>
+    <th>Max Number</th>
+    <th>Description</th>
+  </tr>
+  <% for mixer in @mixers %>
+    <tr>
+      <td><%=h mixer.name %></td>
+      <td><%=h mixer.date %></td>
+      <td><%=h mixer.location %></td>
+      <td><%=h mixer.max_number %></td>
+      <td><%=h mixer.description %></td>
+      <td><%= link_to "Show", mixer %></td>
+      <td><%= link_to "Edit", edit_mixer_path(mixer) %></td>
+      <td><%= link_to "Destroy", mixer, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Mixer", new_mixer_path %></p>

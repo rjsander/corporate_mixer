@@ -1,0 +1,48 @@
+<% title "Student" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @student.full_name %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%=h @student.email %>
+</p>
+<p>
+  <strong>Major:</strong>
+  <%=h @student.major %>
+</p>
+<p>
+  <strong>Grad Year:</strong>
+  <%=h @student.grad_year %>
+</p>
+<p>
+  <strong>Affiliation:</strong>
+  <%=h @student.affiliation %>
+</p>
+<p>
+  <strong>Choice1:</strong>
+  <%=h @student.choice1 %>
+</p>
+<p>
+  <strong>Choice2:</strong>
+  <%=h @student.choice2 %>
+</p>
+<p>
+  <strong>Choice3:</strong>
+  <%=h @student.choice3 %>
+</p>
+<p>
+  <strong>Choice4:</strong>
+  <%=h @student.choice4 %>
+</p>
+<p>
+  <strong>Choice5:</strong>
+  <%=h @student.choice5 %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_student_path(@student) %> |
+  <%= link_to "Destroy", @student, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", students_path %>
+</p>

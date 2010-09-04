@@ -1,0 +1,25 @@
+one:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  major: MyString
+  grad_year: 1
+  affiliation: MyString
+  choice1: MyString
+  choice2: MyString
+  choice3: MyString
+  choice4: MyString
+  choice5: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  major: MyString
+  grad_year: 1
+  affiliation: MyString
+  choice1: MyString
+  choice2: MyString
+  choice3: MyString
+  choice4: MyString
+  choice5: MyString

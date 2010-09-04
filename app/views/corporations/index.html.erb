@@ -1,0 +1,25 @@
+<% title "Corporations" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for corporation in @corporations %>
+    <tr>
+      <td><%=h corporation.name %></td>
+      <td><%=h corporation.description %></td>
+      <td><%= link_to "Details", corporation %></td>
+	 
+	 <%if logged_in? -%>
+      <td><%= link_to "Edit", edit_corporation_path(corporation) %></td>
+      <td><%= link_to "Destroy", corporation, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% end -%>
+	
+    </tr>
+  <% end %>
+</table>
+
+<%if logged_in? -%>
+	<p><%= link_to "New Corporation", new_corporation_path %></p>
+<% end -%>

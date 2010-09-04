@@ -1,0 +1,28 @@
+<% title "Mixer" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @mixer.name %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%=h @mixer.date %>
+</p>
+<p>
+  <strong>Location:</strong>
+  <%=h @mixer.location %>
+</p>
+<p>
+  <strong>Max Number:</strong>
+  <%=h @mixer.max_number %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @mixer.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_mixer_path(@mixer) %> |
+  <%= link_to "Destroy", @mixer, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", mixers_path %>
+</p>

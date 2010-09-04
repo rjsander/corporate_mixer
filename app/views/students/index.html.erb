@@ -1,0 +1,33 @@
+<% title "Students" %>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Major</th>
+    <th>Grad Year</th>
+    <th>Affiliation</th>
+    <th>Choice1</th>
+    <th>Choice2</th>
+    <th>Choice3</th>
+  </tr>
+  <% for student in @students %>
+    <tr>
+      <td><%=h student.first_name %></td>
+      <td><%=h student.last_name %></td>
+      <td><%=h student.email %></td>
+      <td><%=h student.major %></td>
+      <td><%=h student.grad_year %></td>
+      <td><%=h student.affiliation %></td>
+      <td><%=h student.choice1 %></td>
+      <td><%=h student.choice2 %></td>
+      <td><%=h student.choice3 %></td>
+      <td><%= link_to "Show", student %></td>
+      <td><%= link_to "Edit", edit_student_path(student) %></td>
+      <td><%= link_to "Destroy", student, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Student", new_student_path %></p>
