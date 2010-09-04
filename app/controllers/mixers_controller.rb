@@ -1,4 +1,5 @@
 class MixersController < ApplicationController
+  before_filter :login_required
   def index
     @mixers = Mixer.all
   end

@@ -1867,3 +1867,756 @@ Processing StudentsController#show (for 127.0.0.1 at 2010-09-03 21:33:53) [GET]
 Rendering template within layouts/application
 Rendering students/show
 Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/students/1]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-09-03 23:30:15) [DELETE]
+  Parameters: {"authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "id"=>"1"}
+  [4;35;1mStudent Load (0.3ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 1) [0m
+  [4;36;1mStudent Destroy (0.7ms)[0m   [0;1mDELETE FROM "students" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/students
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/students/1]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-03 23:30:15) [GET]
+  [4;35;1mStudent Load (0.4ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-03 23:30:18) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (8.9ms)
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-03 23:30:43) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "student"=>{"choice_three"=>"Deloitte", "choice_two"=>"Deloitte", "grad_year"=>"2011", "major"=>"9", "choice_four"=>"Deloitte", "choice_five"=>"Deloitte", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"Boeing", "email"=>"k.dockz@gmail.com", "first_name"=>"Karl"}}
+WARNING: Can't mass-assign these protected attributes: choice_three, choice_two, choice_four, choice_five, choice_one
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+Sent mail to k.dockz@gmail.com
+
+Date: Fri, 3 Sep 2010 23:30:43 -0400
+From: cmu.nsbe.cl@gmail.com
+To: k.dockz@gmail.com
+Subject: Corporate Mixer: You're registered.
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Dear Karl,<br />
+<br />
+You have RSVP'ed for the NSBE/SHPE Fall Corporate Mixer.<br />
+  [4;35;1mStudent Create (0.4ms)[0m   [0mINSERT INTO "students" ("created_at", "updated_at", "choice_three", "major", "grad_year", "choice_two", "choice_four", "last_name", "choice_five", "affiliation", "first_name", "email", "active", "choice_one") VALUES('2010-09-04 03:30:43', '2010-09-04 03:30:43', NULL, '9', 2011, NULL, NULL, 'Dockery', NULL, '1', 'Karl', 'k.dockz@gmail.com', 't', NULL)[0m
+Redirected to http://localhost:3000/students/2
+Completed in 165ms (DB: 1) | 302 Found [http://localhost/students]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-09-03 23:30:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mStudent Load (0.3ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering students/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/students/2]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-09-03 23:34:31) [DELETE]
+  Parameters: {"authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "id"=>"2"}
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 2) [0m
+  [4;35;1mStudent Destroy (0.5ms)[0m   [0mDELETE FROM "students" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/students
+Completed in 37ms (DB: 1) | 302 Found [http://localhost/students/2]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-03 23:34:31) [GET]
+  [4;36;1mStudent Load (0.5ms)[0m   [0;1mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 89ms (View: 84, DB: 1) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-03 23:34:35) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (10.7ms)
+Completed in 26ms (View: 19, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-03 23:34:58) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "student"=>{"choice_three"=>"Deloitte", "choice_two"=>"Deloitte", "grad_year"=>"2011", "major"=>"9", "choice_four"=>"Boeing", "choice_five"=>"Deloitte", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"Boeing", "email"=>"k.dockz@gmail.com", "first_name"=>"Karl"}}
+WARNING: Can't mass-assign these protected attributes: choice_three, choice_two, choice_four, choice_five, choice_one
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+Sent mail to k.dockz@gmail.com
+
+Date: Fri, 3 Sep 2010 23:34:58 -0400
+From: cmu.nsbe.cl@gmail.com
+To: k.dockz@gmail.com
+Subject: Corporate Mixer: You're registered.
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Dear Karl,<br />
+<br />
+You have RSVP'ed for the NSBE/SHPE Fall Corporate Mixer.<br />
+  [4;36;1mStudent Create (0.4ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "choice_three", "major", "grad_year", "choice_two", "choice_four", "last_name", "choice_five", "affiliation", "first_name", "email", "active", "choice_one") VALUES('2010-09-04 03:35:01', '2010-09-04 03:35:01', NULL, '9', 2011, NULL, NULL, 'Dockery', NULL, '1', 'Karl', 'k.dockz@gmail.com', 't', NULL)[0m
+Redirected to http://localhost:3000/students/3
+Completed in 3066ms (DB: 1) | 302 Found [http://localhost/students]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-09-03 23:35:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mStudent Load (0.4ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering students/show
+Completed in 87ms (View: 79, DB: 0) | 200 OK [http://localhost/students/3]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-09-03 23:35:49) [DELETE]
+  Parameters: {"authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "id"=>"3"}
+  [4;36;1mStudent Load (0.3ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 3) [0m
+  [4;35;1mStudent Destroy (0.7ms)[0m   [0mDELETE FROM "students" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/students
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/students/3]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-03 23:35:49) [GET]
+  [4;36;1mStudent Load (0.8ms)[0m   [0;1mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-03 23:37:38) [GET]
+  [4;35;1mStudent Load (0.4ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-03 23:37:40) [GET]
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-03 23:37:43) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (8.8ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-03 23:38:23) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "student"=>{"choice_three"=>"7", "choice_two"=>"5", "grad_year"=>"2011", "major"=>"9", "choice_four"=>"2", "choice_five"=>"4", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"k.dockz@gmail.com", "first_name"=>"Karl"}}
+WARNING: Can't mass-assign these protected attributes: choice_three, choice_two, choice_four, choice_five, choice_one
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+Sent mail to k.dockz@gmail.com
+
+Date: Fri, 3 Sep 2010 23:38:23 -0400
+From: cmu.nsbe.cl@gmail.com
+To: k.dockz@gmail.com
+Subject: Corporate Mixer: You're registered.
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Dear Karl,<br />
+<br />
+You have RSVP'ed for the NSBE/SHPE Fall Corporate Mixer.<br />
+  [4;36;1mStudent Create (3.7ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "choice_three", "major", "grad_year", "choice_two", "choice_four", "last_name", "choice_five", "affiliation", "first_name", "email", "active", "choice_one") VALUES('2010-09-04 03:38:26', '2010-09-04 03:38:26', NULL, '9', 2011, NULL, NULL, 'Dockery', NULL, '1', 'Karl', 'k.dockz@gmail.com', 't', NULL)[0m
+Redirected to http://localhost:3000/students/4
+Completed in 3068ms (DB: 4) | 302 Found [http://localhost/students]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-09-03 23:38:26) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mStudent Load (0.3ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering students/show
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/students/4]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-09-03 23:39:16) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mStudent Load (0.3ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering students/show
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/students/4]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-09-03 23:39:21) [DELETE]
+  Parameters: {"authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "id"=>"4"}
+  [4;35;1mStudent Load (0.3ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 4) [0m
+  [4;36;1mStudent Destroy (0.3ms)[0m   [0;1mDELETE FROM "students" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/students
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/students/4]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-03 23:39:21) [GET]
+  [4;35;1mStudent Load (0.4ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-03 23:39:23) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (8.7ms)
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-03 23:40:28) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "student"=>{"choice_three"=>"5", "choice_two"=>"3", "grad_year"=>"2011", "major"=>"9", "choice_four"=>"1", "choice_five"=>"8", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"2", "email"=>"k.dockz@gmail.com", "first_name"=>"Karl"}}
+  [4;36;1mSQL (4.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+Sent mail to k.dockz@gmail.com
+
+Date: Fri, 3 Sep 2010 23:40:28 -0400
+From: cmu.nsbe.cl@gmail.com
+To: k.dockz@gmail.com
+Subject: Corporate Mixer: You're registered.
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Dear Karl,<br />
+<br />
+You have RSVP'ed for the NSBE/SHPE Fall Corporate Mixer.<br />
+  [4;35;1mStudent Create (12.5ms)[0m   [0mINSERT INTO "students" ("created_at", "updated_at", "choice_three", "major", "grad_year", "choice_two", "choice_four", "last_name", "choice_five", "affiliation", "first_name", "email", "active", "choice_one") VALUES('2010-09-04 03:40:30', '2010-09-04 03:40:30', '5', '9', 2011, '3', '1', 'Dockery', '8', '1', 'Karl', 'k.dockz@gmail.com', 't', '2')[0m
+Redirected to http://localhost:3000/students/5
+Completed in 2325ms (DB: 17) | 302 Found [http://localhost/students]
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2010-09-03 23:40:30) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering students/show
+Completed in 546ms (View: 31, DB: 0) | 200 OK [http://localhost/students/5]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-04 00:50:52) [GET]
+  [4;35;1mStudent Load (13.8ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 256ms (View: 88, DB: 14) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-04 00:54:09) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/students]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-09-04 00:54:09) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 270ms (View: 268, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-09-04 00:54:23) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 69ms (View: 68, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-09-04 00:55:32) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-09-04 00:56:22) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 111ms (View: 109, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-04 00:57:45) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (42.1ms)
+Completed in 51ms (View: 44, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-04 00:58:28) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (8.9ms)
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-04 00:59:05) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (10.8ms)
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-04 02:46:47) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (27.6ms)
+Completed in 42ms (View: 33, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 02:47:15) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "student"=>{"choice_three"=>"1", "choice_two"=>"1", "grad_year"=>"2011", "major"=>"9", "choice_four"=>"3", "choice_five"=>"5", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/students]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-09-04 02:47:15) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 02:49:03) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "student"=>{"choice_three"=>"1", "choice_two"=>"1", "grad_year"=>"2011", "major"=>"9", "choice_four"=>"3", "choice_five"=>"5", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+Sent mail to karl@cmu.edu
+
+Date: Sat, 4 Sep 2010 02:49:03 -0400
+From: cmu.nsbe.cl@gmail.com
+To: karl@cmu.edu
+Subject: Corporate Mixer: You're registered.
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Dear Karl,<br />
+<br />
+You have RSVP'ed for the NSBE/SHPE Fall Corporate Mixer.<br />
+  [4;35;1mStudent Load (0.2ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."choice_one" = '1') LIMIT 1[0m
+  [4;36;1mStudent Load (0.1ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."choice_two" = '1') LIMIT 1[0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."choice_three" = '1') LIMIT 1[0m
+  [4;36;1mStudent Load (0.1ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."choice_four" = '3') LIMIT 1[0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."choice_five" = '5') LIMIT 1[0m
+  [4;36;1mStudent Create (0.3ms)[0m   [0;1mINSERT INTO "students" ("created_at", "updated_at", "choice_three", "major", "grad_year", "choice_two", "choice_four", "last_name", "choice_five", "affiliation", "first_name", "email", "active", "choice_one") VALUES('2010-09-04 06:49:05', '2010-09-04 06:49:05', '1', '9', 2011, '1', '3', 'Dockery', '5', '1', 'Karl', 'karl@cmu.edu', 't', '1')[0m
+
+NameError (undefined local variable or method `home_path' for #<StudentsController:0x1031b74a8>):
+  app/controllers/students_controller.rb:30:in `create'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (17.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 02:49:36) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "student"=>{"choice_three"=>"1", "choice_two"=>"1", "grad_year"=>"2011", "major"=>"9", "choice_four"=>"3", "choice_five"=>"5", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+Sent mail to karl@cmu.edu
+
+Date: Sat, 4 Sep 2010 02:49:36 -0400
+From: cmu.nsbe.cl@gmail.com
+To: karl@cmu.edu
+Subject: Corporate Mixer: You're registered.
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Dear Karl,<br />
+<br />
+You have RSVP'ed for the NSBE/SHPE Fall Corporate Mixer.<br />
+  [4;36;1mStudent Load (0.3ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."choice_one" = '1') LIMIT 1[0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."choice_two" = '1') LIMIT 1[0m
+  [4;36;1mStudent Load (0.1ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."choice_three" = '1') LIMIT 1[0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."choice_four" = '3') LIMIT 1[0m
+  [4;36;1mStudent Load (0.1ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."choice_five" = '5') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (165.4ms)
+Completed in 1921ms (View: 167, DB: 1) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 02:50:06) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "student"=>{"choice_three"=>"10", "choice_two"=>"4", "grad_year"=>"2011", "major"=>"1", "choice_four"=>"3", "choice_five"=>"5", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+Sent mail to karl@cmu.edu
+
+Date: Sat, 4 Sep 2010 02:50:06 -0400
+From: cmu.nsbe.cl@gmail.com
+To: karl@cmu.edu
+Subject: Corporate Mixer: You're registered.
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Dear Karl,<br />
+<br />
+You have RSVP'ed for the NSBE/SHPE Fall Corporate Mixer.<br />
+  [4;36;1mStudent Load (0.3ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."choice_one" = '1') LIMIT 1[0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."choice_two" = '4') LIMIT 1[0m
+  [4;36;1mStudent Load (0.1ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."choice_three" = '10') LIMIT 1[0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."choice_four" = '3') LIMIT 1[0m
+  [4;36;1mStudent Load (0.1ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."choice_five" = '5') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (16.0ms)
+Completed in 1505ms (View: 18, DB: 1) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 02:57:29) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "student"=>{"choice_three"=>"10", "choice_two"=>"4", "grad_year"=>"2011", "major"=>"1", "choice_four"=>"3", "choice_five"=>"5", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+  [4;36;1mStudent Load (0.2ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."choice_one" = '1' AND "students".choice_two = '4' AND "students".choice_three = '10' AND "students".choice_four = '3' AND "students".choice_five = '5') LIMIT 1[0m
+  [4;35;1mStudent Create (21.5ms)[0m   [0mINSERT INTO "students" ("created_at", "updated_at", "choice_three", "major", "grad_year", "choice_two", "choice_four", "last_name", "choice_five", "affiliation", "first_name", "email", "active", "choice_one") VALUES('2010-09-04 06:57:29', '2010-09-04 06:57:29', '10', '1', 2011, '4', '3', 'Dockery', '5', '1', 'Karl', 'karl@cmu.edu', 't', '1')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+Sent mail to karl@cmu.edu
+
+Date: Sat, 4 Sep 2010 02:57:29 -0400
+From: cmu.nsbe.cl@gmail.com
+To: karl@cmu.edu
+Subject: Corporate Mixer: You're registered.
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Dear Karl,<br />
+<br />
+You have RSVP'ed for the NSBE/SHPE Fall Corporate Mixer.<br />
+Redirected to http://localhost:3000/
+Completed in 2039ms (DB: 22) | 302 Found [http://localhost/students]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-09-04 02:57:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 02:57:44) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "student"=>{"choice_three"=>"10", "choice_two"=>"1", "grad_year"=>"2011", "major"=>"1", "choice_four"=>"3", "choice_five"=>"5", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+  [4;36;1mStudent Load (0.2ms)[0m   [0;1mSELECT "students".id FROM "students" WHERE ("students"."choice_one" = '1' AND "students".choice_two = '1' AND "students".choice_three = '10' AND "students".choice_four = '3' AND "students".choice_five = '5') LIMIT 1[0m
+  [4;35;1mStudent Create (0.4ms)[0m   [0mINSERT INTO "students" ("created_at", "updated_at", "choice_three", "major", "grad_year", "choice_two", "choice_four", "last_name", "choice_five", "affiliation", "first_name", "email", "active", "choice_one") VALUES('2010-09-04 06:57:44', '2010-09-04 06:57:44', '10', '1', 2011, '1', '3', 'Dockery', '5', '1', 'Karl', 'karl@cmu.edu', 't', '1')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+Sent mail to karl@cmu.edu
+
+Date: Sat, 4 Sep 2010 02:57:44 -0400
+From: cmu.nsbe.cl@gmail.com
+To: karl@cmu.edu
+Subject: Corporate Mixer: You're registered.
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Dear Karl,<br />
+<br />
+You have RSVP'ed for the NSBE/SHPE Fall Corporate Mixer.<br />
+Redirected to http://localhost:3000/
+Completed in 1578ms (DB: 1) | 302 Found [http://localhost/students]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-09-04 02:57:46) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-04 04:12:56) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/students]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-09-04 04:12:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-09-04 04:13:01) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-09-04 04:13:05) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 195ms (View: 70, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-04 04:13:14) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "user"=>{"password_confirmation"=>"sighz0rz", "password"=>"sighz0rz", "login"=>"karl", "email"=>"k.dockz@gmail.com"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'karl') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'k.dockz@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (38.7ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "crypted_password", "remember_token_expires_at", "updated_at", "remember_token", "login", "email") VALUES('', '0e9646d15659d1a227320d86b64aaba70203a1c6', '2010-09-04 08:13:14', 'ece398ce7d79df998921fce4bea519f030d3a142', NULL, '2010-09-04 08:13:14', NULL, 'karl', 'k.dockz@gmail.com')[0m
+Redirected to http://localhost:3000/students
+Completed in 70ms (DB: 39) | 302 Found [http://localhost/users]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-04 04:13:14) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mStudent Load (0.9ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-09-04 04:13:20) [DELETE]
+  Parameters: {"authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "id"=>"5"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mStudent Load (0.6ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 5) [0m
+  [4;36;1mStudent Destroy (0.3ms)[0m   [0;1mDELETE FROM "students" WHERE "id" = 5[0m
+Redirected to http://localhost:3000/students
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/students/5]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-04 04:13:20) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mStudent Load (0.6ms)[0m   [0;1mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 28ms (View: 13, DB: 1) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-09-04 04:13:22) [DELETE]
+  Parameters: {"authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "id"=>"6"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 6) [0m
+  [4;35;1mStudent Destroy (0.3ms)[0m   [0mDELETE FROM "students" WHERE "id" = 6[0m
+Redirected to http://localhost:3000/students
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/students/6]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-04 04:13:22) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mStudent Load (0.5ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 91ms (View: 78, DB: 1) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-09-04 04:13:23) [DELETE]
+  Parameters: {"authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "id"=>"7"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mStudent Load (0.4ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 7) [0m
+  [4;36;1mStudent Destroy (0.3ms)[0m   [0;1mDELETE FROM "students" WHERE "id" = 7[0m
+Redirected to http://localhost:3000/students
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/students/7]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-04 04:13:23) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#destroy (for 127.0.0.1 at 2010-09-04 04:13:26) [DELETE]
+  Parameters: {"authenticity_token"=>"15SDBmuA1P+RO83xOKKi0S1sC5WVQgOPBG5+b1t6s8U=", "id"=>"8"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mStudent Load (0.4ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 8) [0m
+  [4;35;1mStudent Destroy (0.2ms)[0m   [0mDELETE FROM "students" WHERE "id" = 8[0m
+Redirected to http://localhost:3000/students
+Completed in 24ms (DB: 1) | 302 Found [http://localhost/students/8]
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2010-09-04 04:13:26) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mStudent Load (0.2ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/application
+Rendering students/index
+Completed in 82ms (View: 1, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-09-04 04:13:33) [GET]
+Redirected to http://localhost:3000/
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-09-04 04:13:33) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-04 04:13:35) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (8.7ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 04:14:07) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"cqnAQIRwnLaXoR0u9xn6UQnyTYmg2OteWqQ2o46n+LA=", "student"=>{"choice_three"=>"4", "choice_two"=>"1", "grad_year"=>"2011", "major"=>"9", "choice_four"=>"2", "choice_five"=>"10", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"5", "email"=>"k.dockz@gmail.com", "first_name"=>"Karl"}}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."email" = 'k.dockz@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (78.7ms)
+Completed in 92ms (View: 81, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 04:14:28) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"cqnAQIRwnLaXoR0u9xn6UQnyTYmg2OteWqQ2o46n+LA=", "student"=>{"choice_three"=>"2", "choice_two"=>"4", "grad_year"=>"2011", "major"=>"1", "choice_four"=>"10", "choice_five"=>"1", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+  [4;35;1mStudent Load (0.2ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."email" = 'karl@cmu.edu') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering students/new
+
+ActionView::TemplateError (interning empty string) on line #2 of app/views/students/_form.html.erb:
+1: <% form_for @student do |f| %>
+2:   <%= f.error_messages %>
+3:   <p>
+4:     <%= f.label :first_name %><br />
+5:     <%= f.text_field :first_name %>
+
+    app/views/students/_form.html.erb:2
+    app/views/students/_form.html.erb:1
+    app/views/students/new.html.erb:3
+    app/controllers/students_controller.rb:35:in `create'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 04:15:16) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"cqnAQIRwnLaXoR0u9xn6UQnyTYmg2OteWqQ2o46n+LA=", "student"=>{"choice_three"=>"2", "choice_two"=>"4", "grad_year"=>"2011", "major"=>"1", "choice_four"=>"10", "choice_five"=>"1", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+
+SyntaxError (/Users/kdockz/Ruby/corporate_mixer/app/models/student.rb:45: syntax error, unexpected tSTRING_BEG, expecting ')'
+    errors.add(:choice_three"Please do not select the same ...
+                             ^
+/Users/kdockz/Ruby/corporate_mixer/app/models/student.rb:45: syntax error, unexpected ')', expecting kEND
+... corporation more than once.") if choice_three == choice_fou...
+                              ^
+/Users/kdockz/Ruby/corporate_mixer/app/models/student.rb:46: syntax error, unexpected tSTRING_BEG, expecting ')'
+    errors.add(:choice_four"Please do not select the same ...
+                            ^
+/Users/kdockz/Ruby/corporate_mixer/app/models/student.rb:46: syntax error, unexpected ')', expecting kEND
+... corporation more than once.") if choice_four == choice_five
+                              ^):
+  app/controllers/students_controller.rb:17:in `create'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 04:15:33) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"cqnAQIRwnLaXoR0u9xn6UQnyTYmg2OteWqQ2o46n+LA=", "student"=>{"choice_three"=>"2", "choice_two"=>"4", "grad_year"=>"2011", "major"=>"1", "choice_four"=>"10", "choice_five"=>"1", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."email" = 'karl@cmu.edu') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (10.2ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 04:16:25) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"cqnAQIRwnLaXoR0u9xn6UQnyTYmg2OteWqQ2o46n+LA=", "student"=>{"choice_three"=>"2", "choice_two"=>"4", "grad_year"=>"2011", "major"=>"1", "choice_four"=>"10", "choice_five"=>"1", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+  [4;35;1mStudent Load (0.2ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."email" = 'karl@cmu.edu') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (10.6ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 04:16:34) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"cqnAQIRwnLaXoR0u9xn6UQnyTYmg2OteWqQ2o46n+LA=", "student"=>{"choice_three"=>"1", "choice_two"=>"1", "grad_year"=>"2011", "major"=>"1", "choice_four"=>"1", "choice_five"=>"1", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."email" = 'karl@cmu.edu') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (11.1ms)
+Completed in 25ms (View: 13, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 04:16:51) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"cqnAQIRwnLaXoR0u9xn6UQnyTYmg2OteWqQ2o46n+LA=", "student"=>{"choice_three"=>"3", "choice_two"=>"5", "grad_year"=>"2011", "major"=>"1", "choice_four"=>"2", "choice_five"=>"3", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."email" = 'karl@cmu.edu') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (9.7ms)
+Completed in 22ms (View: 11, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2010-09-04 04:17:10) [POST]
+  Parameters: {"commit"=>"RSVP", "authenticity_token"=>"cqnAQIRwnLaXoR0u9xn6UQnyTYmg2OteWqQ2o46n+LA=", "student"=>{"choice_three"=>"3", "choice_two"=>"5", "grad_year"=>"2011", "major"=>"1", "choice_four"=>"2", "choice_five"=>"3", "last_name"=>"Dockery", "affiliation"=>"1", "choice_one"=>"1", "email"=>"karl@cmu.edu", "first_name"=>"Karl"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "students" WHERE (affiliation = '1') [0m
+  [4;35;1mStudent Load (0.1ms)[0m   [0mSELECT "students".id FROM "students" WHERE ("students"."email" = 'karl@cmu.edu') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (141.9ms)
+Completed in 156ms (View: 144, DB: 0) | 200 OK [http://localhost/students]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-09-04 12:13:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 57ms (View: 55, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (18.4ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMixers (20100901194924)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "mixers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "date" datetime, "location" varchar(255), "max_number" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100901194924')[0m
+Migrating to CreateStudents (20100901233107)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "major" varchar(255), "grad_year" integer, "affiliation" varchar(255), "active" boolean, "choice_one" varchar(255), "choice_two" varchar(255), "choice_three" varchar(255), "choice_four" varchar(255), "choice_five" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100901233107')[0m
+Migrating to CreateCorporations (20100901233214)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "corporations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "other_info" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100901233214')[0m
+Migrating to CreateUsers (20100901233604)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(40), "name" varchar(100) DEFAULT '', "email" varchar(100), "crypted_password" varchar(40), "salt" varchar(40), "created_at" datetime, "updated_at" datetime, "remember_token" varchar(40), "remember_token_expires_at" datetime) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_login" ON "users" ("login")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100901233604')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("corporations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("mixers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("students")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m

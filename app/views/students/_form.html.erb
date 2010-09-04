@@ -17,7 +17,7 @@
     <%= f.select :major, Student::MAJOR, :prompt => "What's your major?" %>
   </p>
   <p>
-    <%= f.label :grad_year %><br />
+    <%= f.label "Year" %><br />
     <%= f.text_field :grad_year %>
   </p>
   <p>
@@ -44,5 +44,5 @@
     <%= f.label :choice_five %><br />
     <%= f.select :choice_five, Student::CHOICES, :prompt => "5th choice company" %>
   </p>
-  <p><%= f.submit %></p>
+  <p><%= f.submit "RSVP" %></p>
 <% end %>
