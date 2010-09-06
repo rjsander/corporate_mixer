@@ -2,4 +2,6 @@
 
 <%= render :partial => 'form' %>
 
+<% if logged_in? %>
 <p><%= link_to "Back to List", students_path %></p>
+<% end %>
