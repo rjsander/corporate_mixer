@@ -13,8 +13,10 @@
   <%=h @corporation.other_info %>
 </p>
 
+<% if logged_in? %>
 <p>
   <%= link_to "Edit", edit_corporation_path(@corporation) %> |
   <%= link_to "Destroy", @corporation, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", corporations_path %>
 </p>
+<% end %>
