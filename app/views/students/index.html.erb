@@ -1,5 +1,4 @@
-<% title "Students" %>
-
+<h2>NSBE Registrants</h2>
 <table>
   <tr>
 	<th>Registration Date</th>
@@ -9,7 +8,6 @@
     <th>Email</th>
     <th>Major</th>
     <th>Grad Year</th>
-    <th>Affiliation</th>
     <th>Choice1</th>
     <th>Choice2</th>
     <th>Choice3</th>
@@ -23,7 +21,6 @@
       <td><%=h student.email %></td>
       <td><%=h Student::MAJOR[student.major - 1][0] %></td>
       <td><%=h Student::GRAD_YEAR[student.grad_year - 1][0] %></td>
-      <td><%=h student.get_organization %></td>
       <td><%=h student.choice_one %></td>
       <td><%=h student.choice_two %></td>
       <td><%=h student.choice_three %></td>
@@ -35,6 +32,8 @@
   <% end %>
 </table>
 
+
+<h2>SHPE Registrants</h2>
 <table>
   <tr>
 	<th>Registration Date</th>
@@ -44,7 +43,6 @@
     <th>Email</th>
     <th>Major</th>
     <th>Grad Year</th>
-    <th>Affiliation</th>
     <th>1st Choice</th>
     <th>2nd Choice</th>
     <th>3rd Choice</th>
@@ -58,7 +56,6 @@
       <td><%=h student.email %></td>
       <td><%=h Student::MAJOR[student.major - 1][0] %></td>
       <td><%=h Student::GRAD_YEAR[student.grad_year - 1][0] %></td>
-      <td><%=h student.get_organization %></td>
       <td><%=h student.choice_one %></td>
       <td><%=h student.choice_two %></td>
       <td><%=h student.choice_three %></td>
