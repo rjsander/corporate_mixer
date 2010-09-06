@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+	<th>Registration Date</th>
+	<th>Registration Time</th>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Email</th>
@@ -12,19 +14,54 @@
     <th>Choice2</th>
     <th>Choice3</th>
   </tr>
-  <% for student in @students %>
+  <% for student in @nsbe_students %>
     <tr>
+	  <td><%=h student.created_at.strftime("%m/%d/%y") %></td>
+	  <td><%=h student.created_at.strftime("%l:%M%p") %></td>
       <td><%=h student.first_name %></td>
       <td><%=h student.last_name %></td>
       <td><%=h student.email %></td>
-      <td><%=h student.major %></td>
-      <td><%=h student.grad_year %></td>
-      <td><%=h student.affiliation %></td>
+      <td><%=h Student::MAJOR[student.major - 1][0] %></td>
+      <td><%=h Student::GRAD_YEAR[student.grad_year - 1][0] %></td>
+      <td><%=h student.get_organization %></td>
       <td><%=h student.choice_one %></td>
       <td><%=h student.choice_two %></td>
       <td><%=h student.choice_three %></td>
-      <td><%=h student.choice_four %></td>
-      <td><%=h student.choice_five %></td>
+
+      <td><%= link_to "Show", student %></td>
+      <td><%= link_to "Edit", edit_student_path(student) %></td>
+      <td><%= link_to "Destroy", student, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<table>
+  <tr>
+	<th>Registration Date</th>
+	<th>Registration Time</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Major</th>
+    <th>Grad Year</th>
+    <th>Affiliation</th>
+    <th>1st Choice</th>
+    <th>2nd Choice</th>
+    <th>3rd Choice</th>
+  </tr>
+  <% for student in @shpe_students %>
+    <tr>
+	  <td><%=h student.created_at.strftime("%m/%d/%y") %></td>
+	  <td><%=h student.created_at.strftime("%l:%M%p") %></td>
+      <td><%=h student.first_name %></td>
+      <td><%=h student.last_name %></td>
+      <td><%=h student.email %></td>
+      <td><%=h Student::MAJOR[student.major - 1][0] %></td>
+      <td><%=h Student::GRAD_YEAR[student.grad_year - 1][0] %></td>
+      <td><%=h student.get_organization %></td>
+      <td><%=h student.choice_one %></td>
+      <td><%=h student.choice_two %></td>
+      <td><%=h student.choice_three %></td>
 
       <td><%= link_to "Show", student %></td>
       <td><%= link_to "Edit", edit_student_path(student) %></td>

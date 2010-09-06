@@ -1,7 +1,10 @@
 class StudentsController < ApplicationController
   before_filter :login_required, :except => [:new, :create] 
   def index
-    @students = Student.all
+    @students = Student.by_registration_time
+    
+    @nsbe_students = Student.get_nsbe.by_registration_time
+    @shpe_students = Student.get_shpe.by_registration_time
   end
   
   def show
@@ -24,12 +27,13 @@ class StudentsController < ApplicationController
     if @student.save
       
       if (Student.get_affiliation(@student.affiliation).size >= 20)
+        flash[:notice] = "You have been waitlisted for the NSBE/SHPE Corporate Mixer.  All the slots are full.  You will be notified by email if you are removed from the waitlist."
         PostOffice.deliver_waitlist_msg(@student) 
       else 
+        flash[:notice] = "You are now registered for the NSBE/SHPE Corporate Mixer.  Please check your email for confirmation."
         PostOffice.deliver_registration_msg(@student) 
       end
       
-      flash[:notice] = "You are now registered."
       redirect_to :controller => 'home', :action => 'index'
     else
       render :action => 'new'

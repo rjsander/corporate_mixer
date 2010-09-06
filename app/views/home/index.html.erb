@@ -1,1 +1,9 @@
-<h1><%= link_to "Register for the mixer", new_student_path %></h2>
+<h1><%= link_to "Register for the mixer", new_student_path %></h1>
+	
+
+<% if logged_in? %>
+<p><%= link_to "Logout", logout_path %></p>
+<% else %>
+<p>Admins login <%= link_to "here", login_path %>.</p>
+<% end %>
+

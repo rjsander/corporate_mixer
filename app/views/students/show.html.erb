@@ -10,15 +10,19 @@
 </p>
 <p>
   <strong>Major:</strong>
-  <%=h @student.major %>
+  <%=h Student::MAJOR[@student.major - 1][0] %>
+</p>
+<p>
+  <strong>Registered At:</strong>
+  <%=h @student.created_at.strftime("%l:%M%p on %m/%d/%y") %>
 </p>
 <p>
   <strong>Grad Year:</strong>
-  <%=h @student.grad_year %>
+  <%=h Student::GRAD_YEAR[@student.grad_year - 1][0] %>
 </p>
 <p>
   <strong>Affiliation:</strong>
-  <%=h @student.affiliation %>
+  <%=h @student.get_organization %>
 </p>
 <p>
   <strong>Choice1:</strong>

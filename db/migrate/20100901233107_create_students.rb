@@ -4,9 +4,9 @@ class CreateStudents < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :email
-      t.string :major
+      t.integer :major
       t.integer :grad_year
-      t.string :affiliation
+      t.integer :affiliation
       t.boolean :active
       t.string :choice_one
       t.string :choice_two

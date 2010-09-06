@@ -4,14 +4,19 @@ class Student < ActiveRecord::Base
   # Arrays
   SESSION_LIST = [ ["NSBE", 1], ["SHPE", 2] ]
 
-  CHOICES = [ ["Boeing", 1], ["Deloitte", 2], ["Exxon Mobil", 3], ["General Motors (GM)", 4], ["Intel", 5], ["Lockheed Martin", 6], ["Microsoft", 7], ["Proctor & Gamble (P&G)", 8], ["Qualcomm", 9], ["Schlumberger", 10] ]
+  CHOICES = [ ["Boeing", "Boeing"], ["Deloitte", "Deloitte"], ["Exxon Mobil", "Exxon Mobil"], ["General Motors (GM)", "General Motors (GM)"], ["Intel", "Intel"], ["Lockheed Martin", "Lockheed Martin"], ["Microsoft", "Microsoft"], ["Proctor & Gamble (P&G)", "Proctor & Gamble (P&G)"], ["Qualcomm", "Qualcomm"], ["Schlumberger", "Schlumberger"] ]
 
-  MAJOR = [ ["Biological Science", 1], ["Business", 2], ["Chemical Engineering", 3], ["Chemistry", 4], ["CIT--Undeclared", 4], ["Civil Engineering", 5], ["Computer Science", 6], ["Electrical & Computer Engineering", 7], ["Information Systems Management", 8], ["Information Systems", 9], ["Material Science Engineering", 10], ["Mathematical Science", 11], ["Mechanical Engineering", 12], ["Physics", 13], ["Policy & Management", 14], ["Other", 15] ]  
+  MAJOR = [ ["Biological Science", 1], ["Business", 2], ["Chemical Engineering", 3], ["Chemistry", 4], ["CIT--Undeclared", 5], ["Civil Engineering", 6], ["Computer Science", 7], ["Electrical & Computer Engineering", 8], ["Information Systems Management", 9], ["Information Systems", 10], ["Material Science Engineering", 11], ["Mathematical Science", 12], ["Mechanical Engineering", 13], ["Physics", 14], ["Policy & Management", 15], ["Other", 16] ]  
+  
+  GRAD_YEAR = [ ["2011", 1], ["2012", 2], ["2013", 3], ["2014", 4] ,["2015", 5] ]
+  
   
   #Named Scopes
   named_scope :get_affiliation, lambda { |aff| { :conditions => ['affiliation = ?', aff] } }
   named_scope :get_nsbe, :conditions => ['affiliation = ?', 1]
   named_scope :get_shpe, :conditions => ['affiliation = ?', 2]
+  named_scope :by_registration_time, :order => "created_at"
+  
   named_scope :get_email, lambda { |andrew_id| { :conditions => ['email = ?', andrew_id] } }
   
 
@@ -30,7 +35,7 @@ class Student < ActiveRecord::Base
 
   # Drop Down Menu alternate text methods
   def get_organization
-    return "NSBE" if affliliation == 1
+    return "NSBE" if affiliation == 1
     "SHPE"
   end
   

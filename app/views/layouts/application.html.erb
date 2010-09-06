@@ -7,10 +7,9 @@
     <%= yield(:head) %>
   </head>
   <body>
+	<h1>NSBE/SHPE Fall '10 Corporate Mixer</h1>
     <div id="container">
-      <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <%- end -%>
+	  <%= show_flash_message(:fade => 10) %>
       
       <%- if show_title? -%>
         <h1><%=h yield(:title) %></h1>

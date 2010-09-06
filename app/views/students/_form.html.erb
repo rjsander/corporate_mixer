@@ -18,7 +18,7 @@
   </p>
   <p>
     <%= f.label "Year" %><br />
-    <%= f.text_field :grad_year %>
+    <%= f.select :grad_year, Student::GRAD_YEAR, :prompt => "--select graduation year--" %>
   </p>
   <p>
     <%= f.label :affiliation %><br />
