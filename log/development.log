@@ -3312,3 +3312,17 @@ Rendering template within layouts/application
 Rendering students/new
 Rendered students/_form (12.7ms)
 Completed in 27ms (View: 20, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-06 01:25:57) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (118.3ms)
+Completed in 199ms (View: 184, DB: 0) | 200 OK [http://localhost/students/new]
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2010-09-06 01:26:23) [GET]
+Rendering template within layouts/application
+Rendering students/new
+Rendered students/_form (13.9ms)
+Completed in 26ms (View: 19, DB: 0) | 200 OK [http://localhost/students/new]

@@ -1,5 +1,4 @@
-<h3>Note to every member (SHPE/NSBE): Your dues must be paid for you to be able to attend this event.  If you register and your dues are not paid, you will be waitlisted.</h3>
-<h4>NSBE Members will be able to pay their dues at the next General Body Meeting on Wednesday, September 8th.</h4>
+<h4>In order to participate in this event, you must pay chapter dues at your respective organization's next General Body Meeting. If you register and your dues are not paid, you will be waitlisted.</h4>
 
 <% form_for @student do |f| %>
   <%= f.error_messages %>
@@ -34,7 +33,7 @@
     <%= f.text_area :comments %>
   </p>
 
-  <h4>You must select a company for each choice.</h4>
+  <h4>Please select the top 5 companies that you wish to speak with. Placement is based on first-come, first-served basis.</h4>
   <p>
     <%= f.label :choice_one %><br />
     <%= f.select :choice_one, Student::CHOICES, :prompt => "1st choice company" %>
