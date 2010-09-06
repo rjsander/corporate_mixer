@@ -1,5 +1,5 @@
 class CorporationsController < ApplicationController
-  before_filter :login_required, :except => [:index] 
+  before_filter :login_required, :except => [:index, :show] 
   def index
     @corporations = Corporation.all
   end
