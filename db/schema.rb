@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20100901233604) do
     t.integer  "grad_year"
     t.integer  "affiliation"
     t.boolean  "active"
+    t.text     "comments"
     t.string   "choice_one"
     t.string   "choice_two"
     t.string   "choice_three"

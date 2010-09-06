@@ -8,6 +8,7 @@ class CreateStudents < ActiveRecord::Migration
       t.integer :grad_year
       t.integer :affiliation
       t.boolean :active
+      t.text :comments
       t.string :choice_one
       t.string :choice_two
       t.string :choice_three

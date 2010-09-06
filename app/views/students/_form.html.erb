@@ -1,3 +1,6 @@
+<h3>Note to every member (SHPE/NSBE): Your dues must be paid for you to be able to attend this event.  If you register and your dues are not paid, you will be waitlisted.</h3>
+<h4>NSBE Members will be able to pay their dues at the next General Body Meeting on Wednesday, September 8th.</h4>
+
 <% form_for @student do |f| %>
   <%= f.error_messages %>
   <p>
@@ -12,6 +15,7 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </p>
+
   <p>
     <%= f.label :major %><br />
     <%= f.select :major, Student::MAJOR, :prompt => "What's your major?" %>
@@ -24,6 +28,13 @@
     <%= f.label :affiliation %><br />
     <%= f.select :affiliation, Student::SESSION_LIST, :prompt => "Select an organization" %>
   </p>
+
+  <p>
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </p>
+
+  <h4>You must select a company for each choice.</h4>
   <p>
     <%= f.label :choice_one %><br />
     <%= f.select :choice_one, Student::CHOICES, :prompt => "1st choice company" %>
