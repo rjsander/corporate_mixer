@@ -1,10 +1,11 @@
+
 class Student < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :email, :major, :grad_year, :affiliation, :choice_one, :choice_two, :choice_three, :choice_four, :choice_five
   
   # Arrays
   SESSION_LIST = [ ["NSBE", 1], ["SHPE", 2] ]
 
-  CHOICES = [ ["Boeing", "Boeing"], ["Deloitte", "Deloitte"], ["Exxon Mobil", "Exxon Mobil"], ["General Motors (GM)", "General Motors (GM)"], ["Intel", "Intel"], ["Lockheed Martin", "Lockheed Martin"], ["Microsoft", "Microsoft"], ["Proctor & Gamble (P&G)", "Proctor & Gamble (P&G)"], ["Qualcomm", "Qualcomm"], ["Schlumberger", "Schlumberger"] ]
+  CHOICES = [ ["Boeing", "Boeing"], ["Deloitte", "Deloitte"], ["Exxon Mobil", "Exxon Mobil"], ["General Motors (GM)", "General Motors (GM)"], ["Intel", "Intel"], ["Lockheed Martin", "Lockheed Martin"], ["Microsoft", "Microsoft"], ["Morgan Stanley", "Morgan Stanley"], ["Proctor & Gamble (P&G)", "Proctor & Gamble (P&G)"], ["Qualcomm", "Qualcomm"], ["Schlumberger", "Schlumberger"] ]
 
   MAJOR = [ ["Biological Science", 1], ["Business", 2], ["Chemical Engineering", 3], ["Chemistry", 4], ["CIT--Undeclared", 5], ["Civil Engineering", 6], ["Computer Science", 7], ["Electrical & Computer Engineering", 8], ["Information Systems Management", 9], ["Information Systems", 10], ["Material Science Engineering", 11], ["Mathematical Science", 12], ["Mechanical Engineering", 13], ["Physics", 14], ["Policy & Management", 15], ["Other", 16] ]  
   
