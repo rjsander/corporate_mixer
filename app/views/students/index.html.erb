@@ -1,6 +1,7 @@
 <h2>NSBE Registrants</h2>
 <table>
   <tr>
+	<th>&nbsp;</th>
 	<th>Registration Date</th>
 	<th>Registration Time</th>
     <th>First Name</th>
@@ -11,8 +12,10 @@
     <th>Choice2</th>
     <th>Choice3</th>
   </tr>
+<% i = 1 %>
   <% for student in @nsbe_students %>
     <tr>
+	  <td><%= i %></td>	  
 	  <td><%=h student.created_at.strftime("%m/%d/%y") %></td>
 	  <td><%=h student.created_at.strftime("%l:%M%p") %></td>
       <td><%=h student.first_name %></td>
@@ -34,6 +37,7 @@
 <h2>SHPE Registrants</h2>
 <table>
   <tr>
+	<th>&nbsp;</th>
 	<th>Registration Date</th>
 	<th>Registration Time</th>
     <th>First Name</th>
@@ -44,8 +48,10 @@
     <th>2nd Choice</th>
     <th>3rd Choice</th>
   </tr>
+  <% i = 1 %>
   <% for student in @shpe_students %>
     <tr>
+	  <td><%= i %></td>	  
 	  <td><%=h student.created_at.strftime("%m/%d/%y") %></td>
 	  <td><%=h student.created_at.strftime("%l:%M%p") %></td>
       <td><%=h student.first_name %></td>
