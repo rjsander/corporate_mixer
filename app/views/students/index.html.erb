@@ -15,7 +15,7 @@
 <% i = 1 %>
   <% for student in @nsbe_students %>
     <tr>
-	  <td><%= i %></td>	  
+	  <td><strong><%= "#{i}." %></strong></td>	  
 	  <td><%=h student.created_at.strftime("%m/%d/%y") %></td>
 	  <td><%=h student.created_at.strftime("%l:%M%p") %></td>
       <td><%=h student.first_name %></td>
@@ -52,7 +52,7 @@
   <% i = 1 %>
   <% for student in @shpe_students %>
     <tr>
-	  <td><%= i %></td>	  
+	  <td><strong><%= "#{i}." %></strong></td>	  
 	  <td><%=h student.created_at.strftime("%m/%d/%y") %></td>
 	  <td><%=h student.created_at.strftime("%l:%M%p") %></td>
       <td><%=h student.first_name %></td>
